@@ -15,10 +15,10 @@ while True:
     # Detecta as faces na imagem
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
     print(faces)
-    # Desenha um círculo de cor vermelha nas faces detectadas
-   # for (x, y, w, h) in faces:
-    #    cv2.circle(frame, (int(x + (w / 2)), int(y + (h / 2))), int(w / 2), (0, 0, 255), -1)
-    #    print(x,y,w,h)
+    #Desenha um círculo de cor vermelha nas faces detectadas
+    for (x, y, w, h) in faces:
+        cv2.circle(frame, (int(x + (w / 2)), int(y + (h / 2))), int(w / 2), (0, 0, 255), -1)
+        print(x,y,w,h)
     # Mostra a imagem
     cv2.imshow('frame', frame)
     # Pressione q para sair
